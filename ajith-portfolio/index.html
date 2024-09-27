@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajith Kumar N - Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            background-color: #f8f9fa;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar, .footer {
+            background-color: #6f42c1;
+            color: white;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: auto;
+            /* Changed to square */
+            border-radius: 0; 
+        }
+
+        .info {
+            font-size: 18px;
+        }
+
+        .dark-mode {
+            background-color: #121212 !important;
+            color: #e0e0e0 !important;
+        }
+
+        .navbar.dark-mode {
+            background-color: #593097;
+        }
+
+        .footer.dark-mode {
+            background-color: #593097;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 50px; /* Reduced height */
+            line-height: 50px; /* Center-align text vertically */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            margin-top: 60px; /* To prevent overlap with navbar */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .card {
+            margin-top: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #6f42c1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Ajith Kumar N</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-outline-light ml-3" onclick="toggleMode()">
+                        <i id="mode-icon" class="bi bi-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        <div class="row">
+            <!-- Left Side: Image in Card -->
+            <div class="col-md-4 text-center">
+                <div class="card">
+                    <img src="./assets/img/ajith-kumar-image.png" alt="Ajith Kumar N" class="profile-image card-img-top">
+                </div>
+            </div>
+            <!-- Right Side: About Me Section -->
+            <div class="col-md-8">
+                <h1 class="display-4 text-primary">About Me</h1>
+                <p class="info">A highly skilled Full Stack Developer with over 3 years of experience specializing in .NET Core technologies. Adept at leading project teams and delivering scalable, robust solutions. Seeking to leverage my expertise in full stack development, system architecture, and project management to drive success in a dynamic development environment.</p>
+                
+                <h2>Skills</h2>
+                <ul class="info">
+                    <li>Programming Languages: C#, JavaScript, PHP</li>
+                    <li>Frameworks: .NET Core, Laravel, Angular</li>
+                    <li>Databases: MSSQL, MySQL, PostgreSQL</li>
+                    <li>Tools: Git, Docker, Visual Studio</li>
+                    <li>Soft Skills: Team Leadership, Project Management, Communication</li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer text-center">
+        <p>&copy; 2024 Ajith Kumar N. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Light/Dark Mode Toggle Script -->
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+
+            // Change icon between moon and sun
+            let icon = document.getElementById('mode-icon');
+            icon.classList.toggle('bi-moon');
+            icon.classList.toggle('bi-sun');
+        }
+    </script>
+</body>
+
+</html>
